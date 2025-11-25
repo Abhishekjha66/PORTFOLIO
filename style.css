@@ -525,6 +525,28 @@ body.dark-mode .footer-btn:hover {
   background-color: #0097a7;
 }
 
+/* Dark Mode: Project Cards Fix */
+body.dark-mode .project-card {
+  background-color: #1e1e1e;   /* dark card background */
+  color: #e0e0e0;              /* light text color */
+  border: 1px solid #333;      /* subtle border */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.06); /* soft shadow */
+}
+
+body.dark-mode .project-card h3 {
+  color: #ffffff;              /* bright heading */
+}
+
+body.dark-mode .project-card p {
+  color: #d0d0d0;              /* readable light paragraph */
+}
+
+body.dark-mode .project-card .btn {
+  background-color: #00bcd4;   /* same teal color as buttons */
+  color: #fff;
+}
+
+
 
 
 
