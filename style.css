@@ -183,6 +183,24 @@ body.light-mode .skill-card p {
   box-shadow: 0 14px 32px rgba(0, 188, 212, 0.35);
 }
 
+/* ===== Skill Category Headings ===== */
+.skill-card h4 {
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 12px;
+  background: rgba(0, 229, 255, 0.15);
+  color: #00e5ff;
+}
+
+/* Light mode */
+body.light-mode .skill-card h4 {
+  background: rgba(0, 150, 136, 0.15);
+  color: #004d40;
+}
+
 /* === Certification Cards Grid === */
 #certifications .card {
   background: #fff;
@@ -558,6 +576,7 @@ body.dark-mode .project-card .btn {
   background-color: #00bcd4;   /* same teal color as buttons */
   color: #fff;
 }
+
 
 
 
