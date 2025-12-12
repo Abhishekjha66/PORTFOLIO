@@ -133,73 +133,116 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* ===== Skills Section ===== */
+/* ================================
+   SKILLS SECTION
+================================ */
 
-.skill-card {
-  padding: 22px;
-  border-radius: 14px;
+#skills {
+  padding: 80px 0;
   text-align: center;
-  font-weight: normal;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: default;
 }
 
-/* ===== DARK MODE (DEFAULT) ===== */
-body.dark-mode .skill-card,
-body:not(.light-mode) .skill-card {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #e5e7eb;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-}
-
-body.dark-mode .skill-card h4 {
-  color: #00e5ff;
+#skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
   font-weight: 700;
 }
 
-body.dark-mode .skill-card p {
-  color: #cbd5f5;
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* ===== LIGHT MODE ===== */
-body.light-mode .skill-card {
-  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-  color: #004d40;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+/* Skill Card */
+.skill-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border: 1px solid rgba(0, 229, 255, 0.08);
+  border-radius: 18px;
+  padding: 26px 24px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.light-mode .skill-card h4 {
-  color: #004d40;
-  font-weight: 700;
-}
-
-body.light-mode .skill-card p {
-  color: #00695c;
-}
-
-/* ===== HOVER EFFECT (BOTH MODES) ===== */
+/* Hover effect */
 .skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 32px rgba(0, 188, 212, 0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 229, 255, 0.14);
 }
 
-/* ===== Skill Category Headings ===== */
+/* Skill Heading */
 .skill-card h4 {
-  font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 14px;
   padding: 6px 14px;
   border-radius: 999px;
   display: inline-block;
-  margin-bottom: 12px;
   background: rgba(0, 229, 255, 0.15);
   color: #00e5ff;
 }
 
-/* Light mode */
+/* Skill Text */
+.skill-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+  opacity: 0.95;
+}
+
+/* ================================
+   LIGHT MODE
+================================ */
+
+body.light-mode #skills h2 {
+  color: #0f172a;
+}
+
+body.light-mode .skill-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .skill-card:hover {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+
 body.light-mode .skill-card h4 {
-  background: rgba(0, 150, 136, 0.15);
+  background: rgba(0, 150, 136, 0.18);
   color: #004d40;
 }
+
+body.light-mode .skill-card p {
+  color: #334155;
+}
+
+/* ================================
+   MOBILE OPTIMIZATION
+================================ */
+
+@media (max-width: 600px) {
+  #skills {
+    padding: 60px 0;
+  }
+
+  #skills h2 {
+    font-size: 1.9rem;
+  }
+
+  .skill-card {
+    padding: 22px 20px;
+  }
+
+  .skill-card p {
+    font-size: 0.88rem;
+  }
+}
+
 
 /* === Certification Cards Grid === */
 #certifications .card {
@@ -576,6 +619,7 @@ body.dark-mode .project-card .btn {
   background-color: #00bcd4;   /* same teal color as buttons */
   color: #fff;
 }
+
 
 
 
