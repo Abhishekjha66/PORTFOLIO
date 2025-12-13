@@ -661,6 +661,97 @@ body.dark-mode .project-card .btn {
   color: #fff;
 }
 
+/* Common section layout */
+#about,
+#experience,
+#achievements {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Section headings */
+#about h2,
+#experience h2,
+#achievements h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* About + Experience text */
+#about p,
+#experience p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #cbd5f5;
+  margin-bottom: 18px;
+}
+
+/* ================================
+   EXPERIENCE SECTION CARDS
+================================ */
+
+#experience .certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  margin-top: 20px;
+}
+
+#experience .card {
+  background: linear-gradient(145deg, #050b1d, #020617);
+  border: 1px solid rgba(0, 229, 255, 0.12);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Experience title */
+#experience h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 12px 0 6px;
+  color: #e5e7eb;
+}
+
+/* ================================
+   ACHIEVEMENTS SECTION
+================================ */
+
+#achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#achievements li {
+  background: linear-gradient(145deg, #050b1d, #020617);
+  border: 1px solid rgba(0, 229, 255, 0.12);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  color: #cbd5f5;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================
+   LIGHT MODE OVERRIDES
+================================ */
+
+body.light-mode #about p,
+body.light-mode #experience p {
+  color: #334155;
+}
+
+body.light-mode #experience .card,
+body.light-mode #achievements li {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
 
 
 
