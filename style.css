@@ -706,6 +706,13 @@ body.dark-mode .project-card .btn {
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect (matches Skills & Projects) */
+#experience .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 229, 255, 0.18);
 }
 
 /* Experience title */
@@ -734,6 +741,13 @@ body.dark-mode .project-card .btn {
   margin-bottom: 14px;
   color: #cbd5f5;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect for achievements */
+#achievements li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 229, 255, 0.15);
 }
 
 /* ================================
@@ -750,4 +764,9 @@ body.light-mode #achievements li {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode #experience .card:hover,
+body.light-mode #achievements li:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
