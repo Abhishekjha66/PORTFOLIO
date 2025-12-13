@@ -690,38 +690,130 @@ body.dark-mode .project-card .btn {
 }
 
 /* ================================
-   EXPERIENCE SECTION CARDS
+   EXPERIENCE SECTION (ENHANCED)
 ================================ */
 
-#experience .certification-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 26px;
-  margin-top: 20px;
+#experience {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
+#experience h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+#experience .certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
 #experience .card {
+  position: relative;
   background: linear-gradient(145deg, #050b1d, #020617);
   border: 1px solid rgba(0, 229, 255, 0.12);
   border-radius: 18px;
-  padding: 24px;
+  padding: 26px 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect (matches Skills & Projects) */
-#experience .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 229, 255, 0.18);
+/* Accent line (premium touch) */
+#experience .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00e5ff, transparent);
+  border-radius: 18px 18px 0 0;
+  opacity: 0.7;
 }
 
-/* Experience title */
+/* Hover */
+#experience .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 229, 255, 0.18);
+}
+
+/* Logo */
+#experience .cert-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+/* Role title */
 #experience h3 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin: 12px 0 6px;
+  margin-bottom: 6px;
   color: #e5e7eb;
 }
+
+/* Company name */
+#experience p strong {
+  color: #00e5ff;
+  font-weight: 600;
+}
+
+/* Date line */
+#experience p:nth-of-type(2) strong {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Description */
+#experience p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+  margin-bottom: 14px;
+}
+
+/* Button alignment */
+#experience .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ================================
+   LIGHT MODE SUPPORT
+================================ */
+
+body.light-mode #experience .card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode #experience .card::before {
+  background: linear-gradient(90deg, #0097a7, transparent);
+}
+
+body.light-mode #experience h3 {
+  color: #0f172a;
+}
+
+body.light-mode #experience p {
+  color: #334155;
+}
+
+body.light-mode #experience p strong {
+  color: #006064;
+}
+
 
 /* ================================
    ACHIEVEMENTS SECTION
@@ -770,3 +862,4 @@ body.light-mode #experience .card:hover,
 body.light-mode #achievements li:hover {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
+
